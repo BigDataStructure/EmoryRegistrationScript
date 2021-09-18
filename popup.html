@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="/emoryswitches.css" rel="stylesheet">
         <style>
         body {
             width: 350px;
             height: 400px;
-            background-color: rgb(255, 255, 255);
+            background-color: #ffffff;
+            font-family: Mercury;
+            font-size: 18px;
         }
         @font-face {
             font-family: Mercury;
             src: url(/fonts/Mercury\ Display\ Roman.otf);
         }
         h1 {
-            font-family: Mercury;
             font-size: 32px;
             padding-left: 10px;
             margin-top: auto;
@@ -24,7 +26,15 @@
             -moz-user-select: none;
             -o-user-select: none;
             user-select: none;
-            padding-left: 20px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #c5c5ca;
+            overflow: visible;
+            text-align: center;
+            height: 5px;
+            margin-left: -10px;
+            margin-right: -10px;
         }
         .aligned {
             display: flex;
@@ -32,10 +42,27 @@
             align-items: center;     
         }
         </style>
-        <div class="aligned">
-            <img draggable= "false" src="/images/eshield2.jpg" width= 70 height= 70>
+        <div>
+            <div class="aligned">
+            <a href="https://saprod.emory.edu/psp/saprod/?cmd=login" target="_blank" style="margin-left: 20px;">
+                <img draggable= "false" src="/images/eshield2.jpg" width= 70 height= 70> 
+            </a>
             <!--style="float: left;"-->
-            <h1 style="color:#0033a0">Registration Bot</h1>
+            <h1 style="color:#284486">Registration Bot</h1>
+            </div>
+            <hr>
+            <div>
+                <txt>Set Specific Time</txt>
+                <label class="outter" style="margin-bottom: -5px">
+                    <input type="checkbox">
+                    <div class="inner">
+                        <span class="on">ON</span>
+                        <span class="off">OFF</span>
+                    </div>
+                </label>
+            </div>
         </div>
+
+        
     </head>
 </html>

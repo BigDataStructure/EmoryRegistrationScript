@@ -1,0 +1,95 @@
+.outter {
+    position: relative;
+    left: 150px;
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+}
+.outter input {
+    display: none;
+}
+.inner {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 22px;
+}
+.inner:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 50%;
+}
+/*.plus{
+    display: inline-block;
+    font-weight: bold;
+}*/
+input:checked + .inner .plus{
+    display: none;
+}
+/*.minus{
+    display: none;
+    font-weight: bold;
+}
+input:checked + .inner .minus{
+    display: inline-block;
+}*/
+input:checked + .inner {
+    background-color: #f2a900;
+  }
+/*input:focus + .inner {
+    box-shadow: 0 0 1px #f2a900;
+  }*/
+input:checked + .inner:before {
+    -webkit-transform: translateX(36px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
+  }
+.on{
+    display: none;
+    padding-left: 6px;
+    bottom: 13px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.on,
+.off {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 25%;
+  left: 25%;
+  font-size: 16px;
+}
+.off {
+    left: auto;
+    right: -9px;
+    top: 13px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+input:checked + .inner .on {
+    display: block;
+}
+  
+input:checked + .inner .off {
+    display: none;
+}
